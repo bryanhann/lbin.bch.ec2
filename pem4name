@@ -1,0 +1,8 @@
+#!/bin/sh
+
+case .$1 in
+    .popo)
+        echo ~/.ssh/arf.pem
+        ;;
+esac
+

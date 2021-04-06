@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ssh -i $(pem4name $1) ec2-user@$(ip4name $1)
+

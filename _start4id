@@ -1,0 +1,7 @@
+#!/bin/sh
+
+[ -z "$1" ] && exit
+
+aws ec2 start-instances \
+   --instance-ids $1 \
+

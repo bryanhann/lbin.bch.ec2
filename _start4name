@@ -1,0 +1,3 @@
+#!/bin/sh
+start4id $(id4name $1)
+
