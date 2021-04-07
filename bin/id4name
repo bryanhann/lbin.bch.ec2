@@ -1,0 +1,8 @@
+#!/bin/sh
+
+aws ec2 describe-instances \
+    --filter Name=tag:myname,Values=$1  \
+    --query 'Reservations[].Instances[].InstanceId' \
+    --output text \
+
+
