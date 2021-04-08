@@ -1,0 +1,12 @@
+#!/bin/sh
+
+name=$1
+port=$2
+target=localhost:22
+
+ip=$(  ec2 ip4name  ${name})
+pem=$( ec2 pem4name ${name})
+
+echo }} ssh -fN -R ${port}:${target} -i ${pem} ec2-user@${ip}
+        ssh -fN -R ${port}:${target} -i ${pem} ec2-user@${ip}
+
