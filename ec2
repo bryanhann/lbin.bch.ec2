@@ -1,3 +1,4 @@
-export PATH=$(dirname $0)/bin:${PATH}
-$*
+#!/bin/sh
 
+export PATH=$(dirname $0)/bin:${PATH}
+source $*

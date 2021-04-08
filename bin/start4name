@@ -1,3 +1,5 @@
 #!/bin/sh
-_start4id $(id4name $1)
 
+id=$(id4name $1)
+
+start4id ${id}

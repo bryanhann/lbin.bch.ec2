@@ -1,0 +1,12 @@
+#!/bin/sh
+
+[ -z "$1" ] && exit
+
+id=$1
+
+source myfun:mc
+
+mc __new
+mc      aws ec2 start-instances
+mc      --instance-ids ${id}
+mc __run

@@ -1,8 +1,10 @@
 #!/bin/sh
 
-aws ec2 describe-instances \
-    --filter Name=tag:myname,Values=$1  \
-    --query 'Reservations[].Instances[].InstanceId' \
-    --output text \
+source myfun:mc
 
-
+mc __new
+mc      aws ec2 describe-instances
+mc      --filter Name=tag:myname,Values=$1
+mc      --query 'Reservations[].Instances[].InstanceId'
+mc      --output text
+mc __run
