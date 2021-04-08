@@ -1,7 +1,8 @@
 #!/bin/sh
 
 name=$1
+shift
 pem=$(pem4name $name)
 ip=$(ip4name $name)
 
-ssh -i ${pem} ec2-user@${ip}
+ssh -i ${pem} ec2-user@${ip} $*
