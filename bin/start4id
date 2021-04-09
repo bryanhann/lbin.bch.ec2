@@ -4,7 +4,7 @@
 
 id=$1
 
-source myfun:mc
+. myfun:mc
 
 mc __new
 mc      aws ec2 start-instances

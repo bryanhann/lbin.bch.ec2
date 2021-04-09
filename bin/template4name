@@ -1,6 +1,7 @@
 #!/bin/sh
 
-source myfun:mc
+. myfun:mc
+
 id=$(id4name $1)
 
 mc __new

@@ -2,7 +2,7 @@
 
 [ -z "$1" ] && exit
 
-source myfun:mc
+. myfun:mc
 
 mc __new
 mc      aws ec2 describe-instances
