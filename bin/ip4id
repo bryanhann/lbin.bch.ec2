@@ -4,9 +4,9 @@
 
 . myfun:mc
 
-mc __new
-mc      aws ec2 describe-instances
-mc      --instance-ids $1
-mc      --query 'Reservations[*].Instances[*].PublicIpAddress'
-mc      --output text
-mc __run
+mc .new
+mc .    aws ec2 describe-instances
+mc .    --instance-ids $1
+mc .    --query 'Reservations[*].Instances[*].PublicIpAddress'
+mc .    --output text
+mc .run

@@ -6,7 +6,7 @@ id=$1
 
 . myfun:mc
 
-mc __new
-mc      aws ec2 start-instances
-mc      --instance-ids ${id}
-mc __run
+mc .new
+mc .   aws ec2 start-instances
+mc .   --instance-ids ${id}
+mc .run

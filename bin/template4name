@@ -4,9 +4,9 @@
 
 id=$(id4name $1)
 
-mc __new
-mc     aws ec2 get-launch-template-data
-mc     --query "LaunchTemplateData"
-mc     --instance-id ${id}
-mc     --output json
-mc __run
+mc .new
+mc .  aws ec2 get-launch-template-data
+mc .  --query "LaunchTemplateData"
+mc .  --instance-id ${id}
+mc .  --output json
+mc .run
