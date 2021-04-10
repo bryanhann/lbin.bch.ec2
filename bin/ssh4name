@@ -2,7 +2,10 @@
 
 name=$1
 shift
-pem=$(pem4name $name)
+
+pem_name=$(pem_name4name $name)
+pem_file=${HOME}/${pem_name}.pem
+
 ip=$(ip4name $name)
 
-ssh -i ${pem} ec2-user@${ip} $*
+ssh -i ${pem_file} ec2-user@${ip} $*
