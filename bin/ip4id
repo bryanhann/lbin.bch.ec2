@@ -2,11 +2,8 @@
 
 [ -z "$1" ] && exit
 
-. myfun:mc
+aws ec2 describe-instances \
+   --instance-ids $1 \
+   --query 'Reservations[*].Instances[*].PublicIpAddress' \
+   --output text
 
-mc .new
-mc .    aws ec2 describe-instances
-mc .    --instance-ids $1
-mc .    --query 'Reservations[*].Instances[*].PublicIpAddress'
-mc .    --output text
-mc .run

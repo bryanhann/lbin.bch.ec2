@@ -2,11 +2,5 @@
 
 [ -z "$1" ] && exit
 
-id=$1
-
-. myfun:mc
-
-mc .new
-mc .   aws ec2 start-instances
-mc .   --instance-ids ${id}
-mc .run
+aws ec2 start-instances \
+    --instance-ids ${1}

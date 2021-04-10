@@ -1,12 +1,8 @@
 #!/bin/sh
 
-. myfun:mc
-
 id=$(id4name $1)
 
-mc .new
-mc .  aws ec2 get-launch-template-data
-mc .  --query "LaunchTemplateData"
-mc .  --instance-id ${id}
-mc .  --output json
-mc .run
+aws ec2 get-launch-template-data \
+    --query "LaunchTemplateData" \
+    --instance-id ${id} \
+    --output json \
