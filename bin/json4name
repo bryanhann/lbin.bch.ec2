@@ -1,0 +1,8 @@
+#!/bin/sh
+
+name=$1
+shift
+aws ec2 describe-instances \
+    --filter Name=tag:myname,Values=${name} \
+    --output json \
+    $*
