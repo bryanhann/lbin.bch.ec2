@@ -4,7 +4,7 @@ name=$1
 shift
 
 pem_name=$(pem_name4name $name)
-pem_file=${HOME}/${pem_name}.pem
+pem_file=${HOME}/.ssh/${pem_name}.pem
 
 ip=$(ip4name $name)
 
