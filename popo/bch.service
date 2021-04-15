@@ -1,0 +1,22 @@
+[Unit]
+Description=ROT13 demo service
+After=network.target
+#artLimitIntervalSec=0
+#dStartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+
+# make this three so it will not trigger quitting if restart
+# fails five times within ten seconds
+RestartSec=3 
+
+User=ec2-user
+ExecStart=/usr/bin/env python3 /usr/local/bin/bch-server.py'
+
+# Attempt restarting forever.
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=multi-user.target
