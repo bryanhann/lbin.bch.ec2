@@ -1,2 +1,0 @@
-export PATH=${PATH}:${PWD}
-export MYEC2_ROOT=$PWD

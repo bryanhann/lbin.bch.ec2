@@ -1,0 +1,2 @@
+export MYEC2_ROOT=$(dirname $PWD)
+export PATH=${PATH}:${MYEC2_ROOT}
