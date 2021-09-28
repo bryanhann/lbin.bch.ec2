@@ -3,9 +3,9 @@
 name=$1
 shift
 
-pem_name=$(pem_name4name $name)
+pem_name=$( bch.ec2.pem_name4name $name)
 pem_file=${HOME}/.ssh/${pem_name}.pem
 
-ip=$(ip4name $name)
+ip=$( bch.ec2.ip4name $name)
 
 ssh -i ${pem_file} ec2-user@${ip} $*

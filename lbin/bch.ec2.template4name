@@ -1,6 +1,6 @@
 #!/bin/sh
 
-id=$(id4name $1)
+id=$( bch.ec2.id4name $1)
 
 aws ec2 get-launch-template-data \
     --query "LaunchTemplateData" \

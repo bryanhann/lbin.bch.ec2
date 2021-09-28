@@ -1,2 +1,4 @@
-export MYEC2_ROOT=$(dirname $PWD)
-export PATH=${PATH}:${MYEC2_ROOT}
+#!/source/this/sh
+__lbin_default
+#export MYEC2_ROOT=$(dirname $PWD)
+#export PATH=${PATH}:${MYEC2_ROOT}

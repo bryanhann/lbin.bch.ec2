@@ -1,5 +1,0 @@
-#!/bin/sh
-
-id=$(id4name $1)
-
-start4id ${id}
